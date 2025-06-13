@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024年度 事業報告書 - 株式会社テックイノベーション</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Sans', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide {
+            width: 90%;
+            max-width: 1200px;
+            height: 90vh;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            padding: 60px;
+            display: none;
+            flex-direction: column;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #1a5490;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 24px;
+            color: #34495e;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .metric-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        }
+
+        .metric-value {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1a5490;
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .chart-container {
+            width: 100%;
+            height: 350px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            background: transparent;
+            padding: 20px;
+            padding-bottom: 40px;
+        }
+
+        .bar {
+            width: 80px;
+            background: linear-gradient(to top, #1a5490, #2980b9);
+            border-radius: 5px 5px 0 0;
+            position: relative;
+        }
+
+        .bar-label {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            color: #666;
+        }
+
+        .bar-value {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a5490;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            padding: 12px 24px;
+            background: #1a5490;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: #2980b9;
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .slide-number {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 16px;
+            color: #999;
+        }
+
+        .logo {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a5490;
+        }
+
+        ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            background: #fffacd;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        .section-divider {
+            width: 100px;
+            height: 4px;
+            background: #1a5490;
+            margin: 30px 0;
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 30px;
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+            
+            h2 {
+                font-size: 28px;
+            }
+            
+            .metric-value {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- スライド1: タイトル -->
+        <div class="slide active">
+            <div class="logo">テックイノベーション</div>
+            <div class="slide-number">1 / 8</div>
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h1>2024年度 事業報告書</h1>
+                <div class="section-divider"></div>
+                <p style="font-size: 28px; color: #666;">株式会社テックイノベーション</p>
+                <p style="margin-top: 40px;">2024年12月期</p>
+            </div>
+        </div>
+
+        <!-- スライド2: エグゼクティブサマリー -->
+        <div class="slide">
+            <div class="logo">テックイノベーション</div>
+            <div class="slide-number">2 / 8</div>
+            <h2>エグゼクティブサマリー</h2>
+            <div class="section-divider"></div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">¥12.5B</div>
+                    <div class="metric-label">年間売上高</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">+28%</div>
+                    <div class="metric-label">前年比成長率</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">¥2.8B</div>
+                    <div class="metric-label">営業利益</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">3,500</div>
+                    <div class="metric-label">従業員数</div>
+                </div>
+            </div>
+            <p style="margin-top: 40px;">2024年度は、<span class="highlight">過去最高の業績</span>を達成しました。DX市場の拡大とAI技術への積極投資が成長の主要因となりました。</p>
+        </div>
+
+        <!-- スライド3: 事業概況 -->
+        <div class="slide">
+            <div class="logo">テックイノベーション</div>
+            <div class="slide-number">3 / 8</div>
+            <h2>事業概況</h2>
+            <div class="section-divider"></div>
+            <h3>主要事業分野</h3>
+            <ul>
+                <li><strong>クラウドサービス事業：</strong>売上構成比 45%（前年比 +35%）</li>
+                <li><strong>AIソリューション事業：</strong>売上構成比 30%（前年比 +52%）</li>
+                <li><strong>セキュリティ事業：</strong>売上構成比 15%（前年比 +18%）</li>
+                <li><strong>コンサルティング事業：</strong>売上構成比 10%（前年比 +12%）</li>
+            </ul>
+            <p style="margin-top: 30px;">特に<span class="highlight">AIソリューション事業</span>が急成長し、今後の主力事業として期待されています。</p>
+        </div>
+
+        <!-- スライド4: 財務ハイライト -->
+        <div class="slide">
+            <div class="logo">テックイノベーション</div>
+            <div class="slide-number">4 / 8</div>
+            <h2>財務ハイライト</h2>
+            <div class="section-divider"></div>
+            <h3>売上高推移</h3>
+            <div class="chart-wrapper" style="position: relative; width: 100%; margin-top: 40px;">
+                <div style="position: absolute; left: 0; top: 0; bottom: 60px; width: 50px; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end; padding-right: 10px;">
+                    <span style="font-size: 14px; color: #666;">150</span>
+                    <span style="font-size: 14px; color: #666;">100</span>
+                    <span style="font-size: 14px; color: #666;">50</span>
+                    <span style="font-size: 14px; color: #666;">0</span>
+                </div>
+                <div style="position: absolute; left: -40px; top: 50%; transform: rotate(-90deg); font-size: 16px; color: #666;">売上高（億円）</div>
+                <div class="chart-container" style="margin-left: 60px; position: relative; border-left: 2px solid #ccc; border-bottom: 2px solid #ccc;">
+                    <div class="bar" style="height: 195px;">
+                        <span class="bar-value">78</span>
+                        <span class="bar-label">2021</span>
+                    </div>
+                    <div class="bar" style="height: 212px;">
+                        <span class="bar-value">85</span>
+                        <span class="bar-label">2022</span>
+                    </div>
+                    <div class="bar" style="height: 245px;">
+                        <span class="bar-value">98</span>
+                        <span class="bar-label">2023</span>
+                    </div>
+                    <div class="bar" style="height: 312px;">
+                        <span class="bar-value">125</span>
+                        <span class="bar-label">2024</span>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 20px; font-size: 16px; color: #666;">年度</div>
+            </div>
+        </div>
+
+        <!-- スライド5: 主要成果 -->
+        <div class="slide">
+            <div class="logo">テックイノベーション</div>
+            <div class="slide-number">5 / 8</div>
+            <h2>2024年度の主要成果</h2>
+            <div class="section-divider"></div>
+            <ul>
+                <li>🏆 業界初のAI自動化プラットフォーム「TechAI Pro」をリリース</li>
+                <li>🤝 Fortune 500企業5社との大型契約締結</li>
+                <li>🌏 アジア太平洋地域への事業拡大（シンガポール、オーストラリア）</li>
+                <li>💡 特許取得数：32件（AI関連技術）</li>
+                <li>🏅 「日本DX大賞」金賞受賞</li>
+            </ul>
+            <p style="margin-top: 40px;">これらの成果により、業界内でのポジションを大幅に強化しました。</p>
+        </div>
+
+        <!-- スライド6: 市場環境と競合分析 -->
+        <div class="slide">
+            <div class="logo">テックイノベーション</div>
+            <div class="slide-number">6 / 8</div>
+            <h2>市場環境と競合分析</h2>
+            <div class="section-divider"></div>
+            <h3>市場トレンド</h3>
+            <ul>
+                <li>DX市場規模：2024年 3.2兆円（前年比 +15%）</li>
+                <li>生成AI市場の急速な拡大</li>
+                <li>セキュリティ需要の継続的増加</li>
+            </ul>
+            <h3 style="margin-top: 30px;">競争優位性</h3>
+            <ul>
+                <li>独自のAI技術による差別化</li>
+                <li>エンドツーエンドのソリューション提供能力</li>
+                <li>高い顧客満足度（NPS: 72）</li>
+            </ul>
+        </div>
+
+        <!-- スライド7: 2025年度の展望 -->
+        <div class="slide">
+            <div class="logo">テックイノベーション</div>
+            <div class="slide-number">7 / 8</div>
+            <h2>2025年度の展望</h2>
+            <div class="section-divider"></div>
+            <h3>戦略的重点施策</h3>
+            <ul>
+                <li><strong>AI事業の更なる強化：</strong>R&D投資を30%増加</li>
+                <li><strong>グローバル展開の加速：</strong>欧州市場への参入</li>
+                <li><strong>M&A戦略：</strong>技術シナジーのある企業の買収検討</li>
+                <li><strong>人材投資：</strong>エンジニア500名の新規採用</li>
+            </ul>
+            <div class="metrics-grid" style="margin-top: 40px;">
+                <div class="metric-card">
+                    <div class="metric-value">¥16B</div>
+                    <div class="metric-label">売上高目標</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">25%</div>
+                    <div class="metric-label">営業利益率目標</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- スライド8: 結び -->
+        <div class="slide">
+            <div class="logo">テックイノベーション</div>
+            <div class="slide-number">8 / 8</div>
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h1>ご清聴ありがとうございました</h1>
+                <div class="section-divider"></div>
+                <p style="font-size: 24px; text-align: center; margin-top: 40px;">
+                    テクノロジーで未来を創造する<br>
+                    株式会社テックイノベーション
+                </p>
+                <p style="margin-top: 60px; color: #666;">
+                    お問い合わせ: ir@techinnovation.jp<br>
+                    www.techinnovation.jp
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">前へ</button>
+        <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">次へ</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+            
+            // ナビゲーションボタンの制御
+            document.getElementById('prevBtn').disabled = index === 0;
+            document.getElementById('nextBtn').disabled = index === totalSlides - 1;
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) currentSlide = 0;
+            if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
+            showSlide(currentSlide);
+        }
+
+        // キーボードナビゲーション
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        // 初期表示
+        showSlide(0);
+    </script>
+</body>
+</html>
